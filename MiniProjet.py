@@ -1,5 +1,12 @@
 import random
 
-input("cliquez sur un bouton")
+while True:
 
-print(random.randint(1, 6))
+ x=int ( input("cliquez sur un bouton "))
+
+ if x==0:
+    print ("Bye Bye")
+    break
+
+ elif x==1:
+  print(random.randint(1, 6))
