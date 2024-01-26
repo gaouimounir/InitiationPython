@@ -28,3 +28,13 @@ longueurMdp = int(input("Tapez le nombre de caractères du mot de passe : "))
 caractèresPossibles = "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789!@#$%^&*()_+"
 password = "".join(random.sample(caractèresPossibles, longueurMdp))
 print("Votre mot de passe est : ", password)
+
+#fin
+
+# MiniProjet Python : Génerateur d'un accronyme
+
+nom = str(input("Entrez votre nom et prenom : "))
+pseudo = nom.split()
+
+print("votre nom est : ", nom)
+print("votre pseudo est : ", pseudo)
