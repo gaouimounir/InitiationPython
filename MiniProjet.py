@@ -26,4 +26,5 @@ while True:
   
 longueurMdp = int(input("Tapez le nombre de caractères du mot de passe : "))
 caractèresPossibles = "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789!@#$%^&*()_+"
-print(random.sample(caractèresPossibles, longueurMdp))
+password = "".join(random.sample(caractèresPossibles, longueurMdp))
+print("Votre mot de passe est : ", password)
