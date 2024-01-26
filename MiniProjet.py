@@ -8,7 +8,7 @@ print("Cliquez sur 1 pour lancer le de")
 
 while True:
  #Obligation de choisir un nombre
- x=int ( input("cliquez sur un bouton "))
+ x=int ( input("cliquez sur un bouton : ") )
 
  if x==0:
     print ("Bye Bye")
@@ -20,6 +20,10 @@ while True:
  else : 
   print("choix invalide")
 
+#fin
   
-
-
+# MiniProjet Python : Mot de passe aléatoire
+  
+longueurMdp = int(input("Tapez le nombre de caractères du mot de passe : "))
+caractèresPossibles = "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789!@#$%^&*()_+"
+print(random.sample(caractèresPossibles, longueurMdp))
