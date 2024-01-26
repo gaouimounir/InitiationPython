@@ -34,7 +34,11 @@ print("Votre mot de passe est : ", password)
 # MiniProjet Python : Génerateur d'un accronyme
 
 nom = str(input("Entrez votre nom et prenom : "))
-pseudo = nom.split()
+mots = nom.split()
 
-print("votre nom est : ", nom)
-print("votre pseudo est : ", pseudo)
+accronyme = ""
+
+for i in mots:
+    accronyme = accronyme + str (i[0]).upper()
+
+print("votre accronyme est : ", accronyme)
