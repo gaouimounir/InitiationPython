@@ -58,14 +58,26 @@ print("Fin du programme")
 
 # MiniProjet Python : Devine le nombre
 
-print("Devinez le nombre")
+print("Devinez le nombre entre 1 et 100")
 
 nombreADeviner = random.randint(1, 100)
-nombreTentative = int(input("Tapez le nombre : "))
+result == 0
 
-if nombreTentative == nombreADeviner:
-    print("Bravo ! Vous avez devine le nombre.")
-elif nombreTentative > nombreADeviner:
-    print("Trop grand")
-elif nombreTentative < nombreADeviner:
-    print("Trop petit")
+for i in range(6):
+
+    nombreTentative = int(input("Tapez un nombre : "))
+    if nombreTentative == nombreADeviner:
+        result == 1
+    elif nombreTentative > nombreADeviner:
+        print("Trop grand")
+    elif nombreTentative < nombreADeviner:
+        print("Trop petit")
+
+if result == 1:
+   print("Bravo ! Vous avez devine le nombre.")
+   print(f"Le bon nombre est : {nombreADeviner}")
+else:
+   print("Dommage ! Vous n'avez pas devine le nombre.")
+   print(f"Le bon nombre etait : {nombreADeviner}")    
+
+print("Fin du programme")
