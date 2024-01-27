@@ -2,19 +2,20 @@
 
 import random
 
-print("Bienvenue dans le jeu de des")
-print("Cliquez sur 0 pour quitter")
-print("Cliquez sur 1 pour lancer le de")
+print("Bienvenue dans le 1er projet de jeu de des")
 
 while True:
- #Obligation de choisir un nombre
- x=int ( input("cliquez sur un bouton : ") )
+ 
+ print("Cliquez sur 0 pour quitter")
+ print("Cliquez sur 1 pour lancer le de")
 
- if x==0:
+ x=( input("cliquez sur un bouton : ") )
+
+ if x=="0":
     print ("Fin du jeu")
     break
 
- elif x==1:
+ elif x=="1":
   print(random.randint(1, 6))
 
  else : 
@@ -24,7 +25,7 @@ while True:
   
 # MiniProjet Python : Mot de passe aléatoire
   
-print("Bienvenue dans le generateur de mot de passe aleatoire")
+print("Bienvenue dans le 2eme projet de generateur de mot de passe aleatoire")
   
 longueurMdp = int(input("Tapez le nombre de caractères du mot de passe : "))
 caractèresPossibles = "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789!@#$%^&*()_+"
@@ -37,7 +38,7 @@ print("Fin du programme")
 
 # MiniProjet Python : Génerateur d'un accronyme
 
-print("Bienvenue dans le générateur d'accronyme")
+print("Bienvenue dans le 3eme projet de générateur d'accronyme")
 
 nom = str(input("Entrez votre nom et prenom : "))
 
@@ -58,6 +59,7 @@ print("Fin du programme")
 
 # MiniProjet Python : Devine le nombre
 
+print("Bienvenue dans le 4eme projet de deviner le nombre")
 print("Devinez le nombre entre 1 et 100")
 
 nombreADeviner = random.randint(1, 100)
@@ -88,6 +90,7 @@ print("Fin du programme")
 
 # MiniProjet Python : Pierre Feuille Ciseaux
 
+print("Bienvenue dans le 5eme projet de Pierre Feuille Ciseaux")
 print("Jeu du Pierre Feuille Ciseaux")
 print("Le Premier arrive a 3 points gagne !")
 
@@ -138,6 +141,5 @@ while True:
         elif scoreCpu == 3:
             print("Dommage vous avez perdu")
         break
-
 
 #fin
