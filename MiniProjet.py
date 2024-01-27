@@ -68,6 +68,7 @@ for i in range(6):
     nombreTentative = int(input("Tapez un nombre : "))
     if nombreTentative == nombreADeviner:
         result == 1
+        break
     elif nombreTentative > nombreADeviner:
         print("Trop grand")
     elif nombreTentative < nombreADeviner:
@@ -76,6 +77,7 @@ for i in range(6):
 if result == 1:
    print("Bravo ! Vous avez devine le nombre.")
    print(f"Le bon nombre est : {nombreADeviner}")
+   
 else:
    print("Dommage ! Vous n'avez pas devine le nombre.")
    print(f"Le bon nombre etait : {nombreADeviner}")    
@@ -87,30 +89,55 @@ print("Fin du programme")
 # MiniProjet Python : Pierre Feuille Ciseaux
 
 print("Jeu du Pierre Feuille Ciseaux")
+print("Le Premier arrive a 3 points gagne !")
 
 choix = ["P", "F", "C"]
-cpu = random.choice(choix)
+scoreJoueur = 0
+scoreCpu = 0
 
-print("Choisissez entre pierre, feuille ou ciseaux")
-joueur =str(input("P: Pierre, F: feuille ou C:ciseaux ? ")).capitalize()
+while True:
 
-if joueur == cpu:
-    print("Egalite")
+    cpu = random.choice(choix)
 
-elif joueur == "P":
-    if cpu == "F":
-        print("Perdu")
-    elif cpu == "C":
-        print("Gagne")
+    print("Choisissez entre pierre, feuille ou ciseaux")
+    joueur =str(input("P: Pierre, F: feuille ou C:ciseaux ? ")).capitalize()
 
-elif joueur == "F":
-    if cpu == "C":
-        print("Perdu")
-    elif cpu == "P":
-        print("Gagne")
-        
-elif joueur == "C":
-    if cpu == "P":
-        print("Perdu")
-    elif cpu == "F":
-        print("Gagne")
+    if joueur == cpu:
+        print("Egalite")
+
+    elif joueur == "P":
+        if cpu == "F":
+            print("Perdu")
+            scoreCpu += 1
+        elif cpu == "C":
+            print("Gagne")
+            scoreJoueur += 1
+
+    elif joueur == "F":
+        if cpu == "C":
+            print("Perdu")
+            scoreCpu += 1
+        elif cpu == "P":
+            print("Gagne")
+            scoreJoueur += 1
+
+    elif joueur == "C":
+        if cpu == "P":
+            print("Perdu")
+            scoreCpu += 1
+        elif cpu == "F":
+            print("Gagne")
+            scoreJoueur += 1
+
+    print(f"Score : Joueur {scoreJoueur} point // Cpu {scoreCpu} point")
+
+    if scoreJoueur == 3 or scoreCpu == 3:
+        print("Fin du jeu")
+        if scoreJoueur == 3:
+            print("Bravo vous avez gagne")
+        elif scoreCpu == 3:
+            print("Dommage vous avez perdu")
+        break
+
+
+#fin
