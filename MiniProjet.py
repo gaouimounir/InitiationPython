@@ -86,8 +86,31 @@ print("Fin du programme")
 
 # MiniProjet Python : Pierre Feuille Ciseaux
 
-choix = ["pierre", "feuille", "ciseaux"]
+print("Jeu du Pierre Feuille Ciseaux")
+
+choix = ["P", "F", "C"]
 cpu = random.choice(choix)
 
 print("Choisissez entre pierre, feuille ou ciseaux")
-joueur =str(input("pierre, feuille ou ciseaux ? "))
+joueur =str(input("P: Pierre, F: feuille ou C:ciseaux ? ")).capitalize()
+
+if joueur == cpu:
+    print("Egalite")
+
+elif joueur == "P":
+    if cpu == "F":
+        print("Perdu")
+    elif cpu == "C":
+        print("Gagne")
+
+elif joueur == "F":
+    if cpu == "C":
+        print("Perdu")
+    elif cpu == "P":
+        print("Gagne")
+        
+elif joueur == "C":
+    if cpu == "P":
+        print("Perdu")
+    elif cpu == "F":
+        print("Gagne")
