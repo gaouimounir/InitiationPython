@@ -11,7 +11,7 @@ while True:
  x=int ( input("cliquez sur un bouton : ") )
 
  if x==0:
-    print ("Bye Bye")
+    print ("Fin du jeu")
     break
 
  elif x==1:
@@ -24,14 +24,20 @@ while True:
   
 # MiniProjet Python : Mot de passe aléatoire
   
+print("Bienvenue dans le generateur de mot de passe aleatoire")
+  
 longueurMdp = int(input("Tapez le nombre de caractères du mot de passe : "))
 caractèresPossibles = "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789!@#$%^&*()_+"
 password = "".join(random.sample(caractèresPossibles, longueurMdp))
 print("Votre mot de passe est : ", password)
 
+print("Fin du programme")
+
 #fin
 
 # MiniProjet Python : Génerateur d'un accronyme
+
+print("Bienvenue dans le générateur d'accronyme")
 
 nom = str(input("Entrez votre nom et prenom : "))
 
@@ -45,3 +51,14 @@ def accroGen(pseudo):
 result = accroGen(nom)
 
 print("votre accronyme est : ", result)
+
+print("Fin du programme")
+
+#fin
+
+# MiniProjet Python : Devine le nombre
+
+print("Devinez le nombre")
+
+nombreADeviner = random.randint(1, 100)
+nombreTentative = int(input("Tapez le nombre : "))
