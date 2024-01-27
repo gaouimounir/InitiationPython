@@ -61,25 +61,25 @@ print("Fin du programme")
 print("Devinez le nombre entre 1 et 100")
 
 nombreADeviner = random.randint(1, 100)
-result == 0
+result = 0
 
 for i in range(6):
 
     nombreTentative = int(input("Tapez un nombre : "))
     if nombreTentative == nombreADeviner:
-        result == 1
+        result = 1
         break
     elif nombreTentative > nombreADeviner:
-        print("Trop grand")
+        print("Trop grand, le nombre a trouver est plus petit")
     elif nombreTentative < nombreADeviner:
-        print("Trop petit")
+        print("Trop petit, le nombre a trouver est plus grand")
 
 if result == 1:
-   print("Bravo ! Vous avez devine le nombre.")
-   print(f"Le bon nombre est : {nombreADeviner}")
+   print("Bravo ! Vous avez devine le bon nombre.")
+   print(f"Le nombre a deviner etait : {nombreADeviner}")
    
 else:
-   print("Dommage ! Vous n'avez pas devine le nombre.")
+   print("Dommage ! Vous n'avez pas devine le bon nombre.")
    print(f"Le bon nombre etait : {nombreADeviner}")    
 
 print("Fin du programme")
