@@ -81,3 +81,13 @@ else:
    print(f"Le bon nombre etait : {nombreADeviner}")    
 
 print("Fin du programme")
+
+#fin
+
+# MiniProjet Python : Pierre Feuille Ciseaux
+
+choix = ["pierre", "feuille", "ciseaux"]
+cpu = random.choice(choix)
+
+print("Choisissez entre pierre, feuille ou ciseaux")
+joueur =str(input("pierre, feuille ou ciseaux ? "))
