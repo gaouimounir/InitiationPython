@@ -62,3 +62,10 @@ print("Devinez le nombre")
 
 nombreADeviner = random.randint(1, 100)
 nombreTentative = int(input("Tapez le nombre : "))
+
+if nombreTentative == nombreADeviner:
+    print("Bravo ! Vous avez devine le nombre.")
+elif nombreTentative > nombreADeviner:
+    print("Trop grand")
+elif nombreTentative < nombreADeviner:
+    print("Trop petit")
